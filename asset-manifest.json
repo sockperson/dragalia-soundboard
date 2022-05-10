@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dragalia-soundboard/static/css/main.28f98589.css",
-    "main.js": "/dragalia-soundboard/static/js/main.4c89fd31.js",
+    "main.js": "/dragalia-soundboard/static/js/main.792aca29.js",
     "static/media/elysium.wav": "/dragalia-soundboard/static/media/elysium.f35f321533383f4a993c.wav",
     "static/media/vo_chr_stamp [38].wav": "/dragalia-soundboard/static/media/vo_chr_stamp [38].d77822511b9050651196.wav",
     "static/media/vo_chr_stamp [73].wav": "/dragalia-soundboard/static/media/vo_chr_stamp [73].7c1416cec122df8a44c9.wav",
@@ -243,10 +243,10 @@
     "static/media/87.png": "/dragalia-soundboard/static/media/87.02450340cc88e7be07bb.png",
     "index.html": "/dragalia-soundboard/index.html",
     "main.28f98589.css.map": "/dragalia-soundboard/static/css/main.28f98589.css.map",
-    "main.4c89fd31.js.map": "/dragalia-soundboard/static/js/main.4c89fd31.js.map"
+    "main.792aca29.js.map": "/dragalia-soundboard/static/js/main.792aca29.js.map"
   },
   "entrypoints": [
     "static/css/main.28f98589.css",
-    "static/js/main.4c89fd31.js"
+    "static/js/main.792aca29.js"
   ]
 }
