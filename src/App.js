@@ -33,6 +33,7 @@ class App extends Component {
                 <React.Fragment>
                     <NavBar/>
                     <main className="container">
+                        <div class = "text-center">
                         <LangButton
                             lang = "en"
                             selectedLang = {this.state.selectedLang}
@@ -43,7 +44,7 @@ class App extends Component {
                             selectedLang = {this.state.selectedLang}
                             onChangeLang = {this.handleChangeLang}
                         />
-                        <div></div>
+                        </div>
                         {this.state.stickers.map(sticker => (
                             <AudioButton
                                 key={sticker.audioId}

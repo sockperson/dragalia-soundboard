@@ -4,13 +4,13 @@ class LangButton extends Component {
     styles = {
         fontSize: 50,
         fontWeight: 'bold',
-        fontFamily: 'Arial'
+        fontFamily: 'Trebuchet MS'
     };
 
     render() {
         return (
             <React.Fragment>
-                <button className="m-5" style={this.styles} onClick={() => this.props.onChangeLang(this.props.lang)} className={this.getBadgeClasses()}>
+                <button className="mx-auto" style={this.styles} onClick={() => this.props.onChangeLang(this.props.lang)} className={this.getBadgeClasses()}>
                     {this.props.lang.toUpperCase()}
                 </button>
             </React.Fragment>
