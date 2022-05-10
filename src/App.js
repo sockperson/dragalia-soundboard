@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import NavBar from './components/navbar';
 import AudioButton from './components/audioButton';
+import LangButton from './components/langButton';
 import Counters from './components/counters';
 import {getStickers} from './FileUtils';
 import './App.css';
@@ -9,9 +10,8 @@ import './App.css';
 
 class App extends Component {
     state = {
-            lang: "en",
+            selectedLang: "en",
             stickers: getStickers()
-
     };
     /*
     stickers: [
@@ -23,23 +23,34 @@ class App extends Component {
         new Audio(audio).play();
     };
 
+    handleChangeLang = (lang) => {
+        const selectedLang = lang;
+        this.setState({selectedLang});
+    }
+
     render(){
             return (
                 <React.Fragment>
-                    <NavBar
-                        totalCounters={5}
-                    />
+                    <NavBar/>
                     <main className="container">
-                        <AudioButton
-                            onAudioPlay={this.handleAudioPlay}
+                        <LangButton
+                            lang = "en"
+                            selectedLang = {this.state.selectedLang}
+                            onChangeLang = {this.handleChangeLang}
                         />
+                        <LangButton
+                            lang = "jp"
+                            selectedLang = {this.state.selectedLang}
+                            onChangeLang = {this.handleChangeLang}
+                        />
+                        <div></div>
                         {this.state.stickers.map(sticker => (
                             <AudioButton
                                 key={sticker.audioId}
                                 onAudioPlay={this.handleAudioPlay}
                                 audioId={sticker.audioId}
                                 imgId={sticker.imgId}
-                                lang={this.state.lang}
+                                selectedLang={this.state.selectedLang}
                             />
                         ))}
                     </main>

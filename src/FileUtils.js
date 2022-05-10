@@ -6,34 +6,32 @@ function getImage(imgId, lang){
         return wowKeqing;
     }
     try{
-        return require("./resources/images/" + lang.toUpperCase() + "/" + imgId + "_" + lang + ".png");
+        return require("./resources/images/" + lang.toUpperCase() + "/" + imgId + ".png");
     } catch(err){
-        try{
-            return require("./resources/images/" + lang.toUpperCase() + "/" + imgId + ".png");
-        } catch(err){
-            console.log("Image " + imgId + " of lang " + lang + " could not be loaded");
-            return wowKeqing;
-        }
         return wowKeqing;
     }
     return wowKeqing;
 }
 
 function getAudio(audioId, lang){
+    if(audioId > 116 && lang === 'en'){
+        return undefined;
+    }
     if(typeof lang === 'undefined'){
-            return elysium;
-        }
-    const audio = require("./resources/audio/" + lang.toUpperCase() + "/vo_chr_stamp [" + audioId + "].wav");
-    if(typeof audio === 'undefined'){
         return elysium;
     }
-    return audio;
+    try{
+        return require("./resources/audio/" + lang.toUpperCase() + "/vo_chr_stamp [" + audioId + "].wav");
+    } catch(err){
+        return elysium;
+    }
+        return elysium;
 }
 
 function getStickers(){
     const stickers = [];
-    for(var i=1; i<40; i++){
-        stickers.push({audioId: i, imgId: 10000+i});
+    for(var i=1; i<=119; i++){
+        stickers.push({audioId: i, imgId: i});
     }
     return stickers;
 }
